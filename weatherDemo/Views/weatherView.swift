@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct WeatherView: View {
-    
+  //This view will require a variable called weather and it will be of ResponseBody type
     var weather: ResponseBody
     
     var body: some View {
@@ -48,13 +48,13 @@ struct WeatherView: View {
                     }
                     
                     Spacer()
-                        .frame(height:  80)
+                        .frame(height:  90)
                     
-                    AsyncImage(url: URL(string: "https://pixabay.com/get/gc48833114598d214ac9f660bd2d8320367f151f6cfc8fd670ad46205f3244a5f8433648c10739f9c35b6dc3fcbd83d7f64a95d466a929b0a268d7e188fbb35cb45017e5364be93f1afef6dd18d2b3143_1280.png")) { image in
+                    AsyncImage(url: URL(string: "https://img.freepik.com/free-vector/sydney-australia-skyline-with-opera-house-banner_107791-1190.jpg?w=2000&t=st=1662517024~exp=1662517624~hmac=69d1667d92ba4ec615482c80291be4bee3d1cf12e34c6b0b9fdd8588101729c8")) { image in
                         image
                             .resizable()
                             .aspectRatio(contentMode: .fit)
-                            .frame(width: 350)
+                            .frame(width: 390)
                     } placeholder: {
                         ProgressView()
                     }
