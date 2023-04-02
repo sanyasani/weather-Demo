@@ -7,14 +7,14 @@
 
 import Foundation
 import CoreLocation
-
+// we need to confirm some protocols to use location manager
 class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
     // Creating an instance of CLLocationManager, the framework we use to get the coordinates
     let manager = CLLocationManager()
     
     @Published var location: CLLocationCoordinate2D?
     @Published var isLoading = false
-    //everytime app is opened it will ask pop to grant access for location
+    //everytime app is opened it will ask pop-up to grant access for location
     override init() {
         super.init()
         
@@ -22,7 +22,7 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
         manager.delegate = self
     }
     
-    // Requests the one-time delivery of the user’s current location, see https://developer.apple.com/documentation/corelocation/cllocationmanager/1620548-requestlocation
+    // Requests the one-time delivery of the user’s current location, seehttps://developer.apple.com/documentation/corelocation/cllocationmanager/1620548-requestlocation
     func requestLocation() {
         isLoading = true
         manager.requestLocation()

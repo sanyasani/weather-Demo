@@ -35,7 +35,7 @@ struct WeatherView: View {
                                 .font(.system(size: 40))
                             
                             Text("\(weather.weather[0].main)")
-                        }
+                        }    
                         .frame(width: 150, alignment: .leading)
                         
                         Spacer()
@@ -50,15 +50,15 @@ struct WeatherView: View {
                     Spacer()
                         .frame(height:  90)
                     
-                    AsyncImage(url: URL(string: "https://img.freepik.com/free-vector/sydney-australia-skyline-with-opera-house-banner_107791-1190.jpg?w=2000&t=st=1662517024~exp=1662517624~hmac=69d1667d92ba4ec615482c80291be4bee3d1cf12e34c6b0b9fdd8588101729c8")) { image in
-                        image
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(width: 390)
-                    } placeholder: {
-                        ProgressView()
-                    }
-                    
+//                    AsyncImage(url: URL(string: "https://img.freepik.com/free-vector/sydney-australia-skyline-with-opera-house-banner_107791-1190.jpg?w=2000&t=st=1662517024~exp=1662517624~hmac=69d1667d92ba4ec615482c80291be4bee3d1cf12e34c6b0b9fdd8588101729c8")) { image in
+//                        image
+//                            .resizable()
+//                            .aspectRatio(contentMode: .fit)
+//                            .frame(width: 390)
+//                    } placeholder: {
+//                        ProgressView()
+//                    }
+//
                     Spacer()
                 }
                 .frame(maxWidth: .infinity, alignment: .trailing)

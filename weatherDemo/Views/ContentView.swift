@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
-    // Replace YOUR_API_KEY in WeatherManager with your own API key for the app to work
+    // In WeatherManager add API key for the app to work
+    //Intialize locationmanager to get location, @stateobject is needed  because everytime published Variables ARE UPDATED it is also notified together.
     @StateObject var locationManager = LocationManager()
     var weatherManager = WeatherManager()
     @State var weather: ResponseBody?
